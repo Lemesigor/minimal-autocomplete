@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4d8e8c2-7318-401b-8792-4c9caf5c977b" name="Changes" comment="feat: initial backend structure" />
+    <list default="true" id="c4d8e8c2-7318-401b-8792-4c9caf5c977b" name="Changes" comment="feat: initial backend structure">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "JUnit.All in AutocompleteBackend.executor": "Debug",
     "JUnit.ErrorResponseTest.executor": "Run",
     "JUnit.TermTest.executor": "Run",
@@ -140,7 +142,7 @@
       <workItem from="1728750015577" duration="4936000" />
       <workItem from="1728755082996" duration="6884000" />
       <workItem from="1728765395852" duration="84000" />
-      <workItem from="1728768192723" duration="1315000" />
+      <workItem from="1728768192723" duration="1950000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial backend structure">
       <option name="closed" value="true" />

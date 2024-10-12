@@ -74,7 +74,7 @@ public class TermsController {
     private String deleteTerm(Request req, Response response) {
         try {
             final var id = req.params(":id");
-            termService.delete(id);
+            termService.delete(Long.parseLong(id));
             response.status(204);
             return "";
         } catch (Exception e) {

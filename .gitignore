@@ -1,4 +1,5 @@
 AutocompleteBackend/target/*
+AutocompleteBackend/target/**/*
 AutocompleteBackend/.classpath
 AutocompleteBackend/.project
 AutocompleteBackend/.settings/

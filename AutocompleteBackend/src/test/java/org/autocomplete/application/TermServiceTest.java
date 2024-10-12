@@ -33,8 +33,8 @@ public class TermServiceTest {
 
     @Test
     public void deleteTerm() {
-        termService.delete("term");
-        verify(termsRepository).delete(Term.of("term"));
+        termService.delete(1L);
+        verify(termsRepository).delete(1L);
     }
 
     private final TermsRepository termsRepository = mock(TermsRepository.class);

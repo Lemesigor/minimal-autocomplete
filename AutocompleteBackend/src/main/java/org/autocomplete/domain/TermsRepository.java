@@ -10,5 +10,5 @@ public interface TermsRepository {
 
     void bulkSave(List<Term> terms);
 
-    void delete(Term term);
+    void delete(long id);
 }

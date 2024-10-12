@@ -18,9 +18,8 @@ public class TermService {
         return termsRepository.save(term);
     }
 
-    public void delete(String termValue) {
-        final var term = Term.of(termValue);
-        termsRepository.delete(term);
+    public void delete(long id) {
+        termsRepository.delete(id);
     }
 
     public List<Term> findByPrefix(Query query) {

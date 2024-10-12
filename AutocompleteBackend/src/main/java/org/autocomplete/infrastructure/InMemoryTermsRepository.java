@@ -22,7 +22,7 @@ public class InMemoryTermsRepository implements TermsRepository {
     }
 
     @Override
-    public void delete(Term term) {
+    public void delete(long term) {
 
     }
 }
