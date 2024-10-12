@@ -8,7 +8,5 @@ public interface TermsRepository {
 
     Term save(Term term);
 
-    void bulkSave(List<Term> terms);
-
     void delete(long id);
 }

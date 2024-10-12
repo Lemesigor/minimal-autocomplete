@@ -1,9 +1,14 @@
 package org.autocomplete;
 
+import com.github.benmanes.caffeine.cache.Caffeine;
 import org.autocomplete.application.TermService;
+import org.autocomplete.domain.CacheRepository;
+import org.autocomplete.domain.TermsRepository;
 import org.autocomplete.infrastructure.controller.TermsController;
-import org.autocomplete.infrastructure.jdbc.ConnectionFactory;
-import org.autocomplete.infrastructure.jdbc.TermJdbcRepository;
+import org.autocomplete.infrastructure.repository.CompositeTermsRepository;
+import org.autocomplete.infrastructure.repository.ConnectionFactory;
+import org.autocomplete.infrastructure.repository.TermInMemoryCacheRepository;
+import org.autocomplete.infrastructure.repository.TermJdbcRepository;
 import org.autocomplete.infrastructure.rest.HttpClient;
 import org.autocomplete.infrastructure.rest.SparkClient;
 import org.slf4j.Logger;
@@ -28,9 +33,13 @@ public class Main {
                     "3306"
             );
 
-            HttpClient<Route> client = new SparkClient();
+
             TermJdbcRepository repository = new TermJdbcRepository(connection);
-            TermService service = new TermService(repository);
+            CacheRepository cacheRepository = new TermInMemoryCacheRepository(Caffeine.newBuilder().build());
+            TermsRepository compositeRepository = new CompositeTermsRepository(repository, cacheRepository);
+
+            TermService service = new TermService(compositeRepository);
+            HttpClient<Route> client = new SparkClient();
             TermsController controller = new TermsController(client, service);
 
             controller.listen();

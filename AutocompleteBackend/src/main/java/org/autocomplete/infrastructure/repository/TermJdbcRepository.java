@@ -1,4 +1,4 @@
-package org.autocomplete.infrastructure.jdbc;
+package org.autocomplete.infrastructure.repository;
 
 import org.autocomplete.domain.Term;
 import org.autocomplete.domain.TermsRepository;
@@ -59,10 +59,6 @@ public class TermJdbcRepository implements TermsRepository {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public void bulkSave(List<Term> terms) {
     }
 
     @Override
