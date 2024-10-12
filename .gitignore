@@ -1,19 +1,13 @@
-./AutocompleteBackend/target/
-./AutocompleteBackend/!.mvn/wrapper/maven-wrapper.jar
-./AutocompleteBackend/!**/src/main/**/target/
-./AutocompleteBackend/!**/src/test/**/target/
+AutocompleteBackend/target/*
+AutocompleteBackend/.classpath
+AutocompleteBackend/.project
+AutocompleteBackend/.settings/
 
 ### IntelliJ IDEA ###
-./AutocompleteBackend/.idea/modules.xml
-./AutocompleteBackend/.idea/jarRepositories.xml
-./AutocompleteBackend/.idea/compiler.xml
-./AutocompleteBackend/.idea
-./AutocompleteBackend/*.iws
-./AutocompleteBackend/*.iml
-./AutocompleteBackend*.ipr
-
+AutocompleteBackend/.idea
 
 
 ### Mac OS ###
 .DS_Store
-idea/*
+.idea/*
+*.iml
