@@ -30,7 +30,7 @@ public class Query {
         }
     }
 
-    public String query() {
+    public String value() {
         return value;
     }
 

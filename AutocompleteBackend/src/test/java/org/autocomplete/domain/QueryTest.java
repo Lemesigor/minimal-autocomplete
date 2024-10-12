@@ -7,25 +7,26 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class QueryTest {
     @Test
-    public void createAQuery() {
+    public void createAValue() {
         final var query = Query.of("query", 5);
-        assertThat(query.query(), is("query"));
+        assertThat(query.value(), is("query"));
     }
 
     @Test
-    public void addDefaultLimitToQuery() {
+    public void addDefaultLimitToValue() {
         final var query = Query.of("query");
-        assertThat(query.query(), is("query"));
+        assertThat(query.value(), is("query"));
         assertThat(query.limit(), is(10));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void throwsExceptionWhenQueryIsNull() {
+    public void throwsExceptionWhenValueIsNull() {
         Query.of(null, 5);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void throwsExceptionWhenQueryIsEmpty() {
+    public void throwsExceptionWhenValueIsEmpty() {
         Query.of("", 5);
     }
+
 }

@@ -3,9 +3,9 @@ package org.autocomplete.domain;
 import java.util.List;
 
 public interface TermsRepository {
-    public List<Term> findByPrefix(String prefix);
+    public List<Term> findByPrefix(String prefix, int limit);
 
-    public void save(Term term);
+    public Term save(Term term);
 
     public void bulkSave(List<Term> terms);
 
