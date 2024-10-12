@@ -4,6 +4,6 @@ db_properties="./liquibase.properties"
 
 ./liquibase-3.5.3-bin/liquibase --url="$db_url" --defaultsFile=$db_properties update
 
-if ! grep -Fxq "Liquibase Update Successful" $err; then
+if ! grep -Fxq "Liquibase Update Successful"; then
   exit 1
 fi

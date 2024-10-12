@@ -1,7 +1,6 @@
 package org.autocomplete;
 
 import org.autocomplete.application.TermService;
-import org.autocomplete.infrastructure.InMemoryTermsRepository;
 import org.autocomplete.infrastructure.controller.TermsController;
 import org.autocomplete.infrastructure.jdbc.ConnectionFactory;
 import org.autocomplete.infrastructure.jdbc.TermJdbcRepository;
