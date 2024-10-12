@@ -10,6 +10,4 @@ public interface TermsRepository {
     public void bulkSave(List<Term> terms);
 
     public void delete(Term term);
-
-    public void findAll();
 }
