@@ -16,4 +16,10 @@ public class SparkClient implements  HttpClient<Route> {
         post(path, handler);
         return  null;
     }
+
+    @Override
+    public String deleteResource(String path, Route handler) {
+        delete(path, handler);
+        return null;
+    }
 }

@@ -4,11 +4,11 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface TermsRepository {
-    public List<Term> findByPrefix(String prefix, int limit);
+    List<Term> findByPrefix(String prefix, int limit);
 
-    public Term save(Term term);
+    Term save(Term term);
 
-    public void bulkSave(List<Term> terms);
+    void bulkSave(List<Term> terms);
 
-    public void delete(Term term);
+    void delete(Term term);
 }

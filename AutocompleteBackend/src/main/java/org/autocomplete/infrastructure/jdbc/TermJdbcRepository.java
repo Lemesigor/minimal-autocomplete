@@ -3,10 +3,7 @@ package org.autocomplete.infrastructure.jdbc;
 import org.autocomplete.domain.Term;
 import org.autocomplete.domain.TermsRepository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +18,7 @@ public class TermJdbcRepository implements TermsRepository {
 
     public TermJdbcRepository(final Connection connection) throws SQLException {
         this.selectByPrefixStatement = connection.prepareStatement(SELECT_BY_PREFIX);
-        this.insertStatement = connection.prepareStatement(INSERT);
+        this.insertStatement = connection.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS);
     }
 
 

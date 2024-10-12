@@ -33,7 +33,8 @@ public class TermsController {
     public void listen() {
         logger.info("Listening on route 4567");
         httpClient.getResource(BASE_PATH, this::getTerms);
-
+        httpClient.postResource(BASE_PATH, this::saveTerm);
+        httpClient.deleteResource(BASE_PATH + "/:id", this::deleteTerm);
     }
 
 
@@ -50,6 +51,17 @@ public class TermsController {
         }
     }
 
+    private String saveTerm(Request req, Response res) {
+        try {
+            var request = new Gson().fromJson(req.body(), CreateTermRequest.class);
+            final var savedTerm = termService.save(request.term());
+            res.status(201);
+            return new Gson().toJson(savedTerm);
+        } catch (Exception e) {
+            return handleError(res, e);
+        }
+    }
+
 
     private String getQuery(Request req) throws UnsupportedEncodingException {
         var param = req.queryParams(QUERY_PARAM);
@@ -59,9 +71,22 @@ public class TermsController {
         return URLDecoder.decode(param, "UTF-8");
     }
 
+    private String deleteTerm(Request req, Response response) {
+        try {
+            final var id = req.params(":id");
+            termService.delete(id);
+            response.status(204);
+            return "";
+        } catch (Exception e) {
+            return handleError(response, e);
+        }
+    }
+
     private static String handleError(Response res, Exception e) {
         final var error = new ErrorResponse(e.getMessage(), e);
         res.status(error.getStatus());
         return new Gson().toJson(error);
     }
+
+
 }
