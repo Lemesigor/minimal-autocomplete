@@ -23,16 +23,12 @@ public class Main {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(Main.class);
         logger.info("Initialing api");
+        String dbUrl = System.getenv("DB_URL");
+        String dbUser = System.getenv("DB_USER");
+        String dbPassword = System.getenv("DB_PASSWORD");
 
         try {
-            Connection connection = ConnectionFactory.createConnection(
-                    "localhost",
-                    "root",
-                    "root",
-                    "autocomplete",
-                    "3306"
-            );
-
+            Connection connection = ConnectionFactory.createConnection(dbUrl, dbUser, dbPassword);
 
             TermJdbcRepository repository = new TermJdbcRepository(connection);
             CacheRepository cacheRepository = new TermInMemoryCacheRepository(Caffeine.newBuilder().build());

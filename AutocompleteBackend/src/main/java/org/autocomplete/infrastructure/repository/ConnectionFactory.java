@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-    public static Connection createConnection(String address, String user, String password, String database, String port)
+    public static Connection createConnection(String url, String user, String password)
             throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://" + address + ":" + port + "/" + database, user, password);
+        return DriverManager.getConnection(url, user, password);
     }
 }
