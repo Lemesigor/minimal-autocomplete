@@ -2,8 +2,7 @@ package org.autocomplete.infrastructure.rest;
 
 import spark.*;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 public class SparkClient implements  HttpClient<Route> {
     @Override

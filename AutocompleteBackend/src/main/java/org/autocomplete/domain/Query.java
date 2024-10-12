@@ -15,8 +15,12 @@ public class Query {
         validate();
     }
 
-    public static Query of(String query, int limit) {
-        return new Query(query, limit);
+    public static Query of(String query, Integer limit) {
+        if (Objects.nonNull(limit)) {
+            return new Query(query, limit);
+        } else {
+            return new Query(query, DEFAULT_LIMIT);
+        }
     }
 
     public static Query of(String query) {
@@ -47,6 +51,7 @@ public class Query {
 
 
     }
+
     private boolean equalsCasted(Query other) {
         return Objects.equals(limit, other.limit)
                 && Objects.equals(value, other.value);
