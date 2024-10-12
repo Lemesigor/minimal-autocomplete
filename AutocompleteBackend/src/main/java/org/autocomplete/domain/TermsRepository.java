@@ -1,5 +1,6 @@
 package org.autocomplete.domain;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface TermsRepository {

@@ -50,6 +50,7 @@ public class TermsController {
         }
     }
 
+
     private String getQuery(Request req) throws UnsupportedEncodingException {
         var param = req.queryParams(QUERY_PARAM);
         if (param == null) {

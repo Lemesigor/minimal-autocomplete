@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: igor
+      changes:
+        - createTable:
+            tableName: terms
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: term
+                  type: varchar(256)
+                  constraints:
+                    unique: true
+        - loadData:
+            file: './terms.csv'
+            tableName: terms
+            columns:
+              - column:
+                  name: id
+                  type: NUMERIC
+              - column:
+                  name: term
+                  type: STRING
