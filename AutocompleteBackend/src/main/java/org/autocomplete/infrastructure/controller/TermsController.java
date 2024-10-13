@@ -35,8 +35,32 @@ public class TermsController {
         httpClient.getResource(BASE_PATH, this::getTerms);
         httpClient.postResource(BASE_PATH, this::saveTerm);
         httpClient.deleteResource(BASE_PATH + "/:id", this::deleteTerm);
-    }
+        httpClient.options("/*",
+                (request, response) -> {
 
+                    String accessControlRequestHeaders = request
+                            .headers("Access-Control-Request-Headers");
+                    if (accessControlRequestHeaders != null) {
+                        response.header("Access-Control-Allow-Headers",
+                                accessControlRequestHeaders);
+                    }
+
+                    String accessControlRequestMethod = request
+                            .headers("Access-Control-Request-Method");
+                    if (accessControlRequestMethod != null) {
+                        response.header("Access-Control-Allow-Methods",
+                                accessControlRequestMethod);
+                    }
+
+                    return "OK";
+                });
+        httpClient.before((request, response) -> {
+            response.header("Access-Control-Allow-Origin", "*");
+            response.header("Access-Control-Request-Method", "*");
+            response.header("Access-Control-Allow-Headers", "*");
+            response.type("application/json");
+        });
+    }
 
     private String getTerms(Request req, Response res) {
         try {

@@ -22,4 +22,15 @@ public class SparkClient implements  HttpClient<Route> {
         delete(path, handler);
         return null;
     }
+    @Override
+    public String options(String path, Route handler) {
+        Spark.options(path, handler);
+        return null;
+    }
+
+    @Override
+    public String before(Filter filter) {
+        Spark.before(filter);
+        return null;
+    }
 }
