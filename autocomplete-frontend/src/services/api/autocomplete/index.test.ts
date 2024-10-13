@@ -75,10 +75,10 @@ describe('getAutocompleteData', () => {
         const mockAbortController = new AbortController();
         const signal = mockAbortController.signal;
 
-        mockAbortController.abort(); // Abort before awaiting the result
+        mockAbortController.abort();
         const resultPromise = getAutocompleteData('apple', signal);
 
-        const result = await resultPromise; // Await the promise to handle abort
+        const result = await resultPromise;
 
         expect(result).toEqual([]);
         expect(abortFn).toHaveBeenCalled();
