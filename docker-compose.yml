@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   mysql:
     image: mysql:8.0
@@ -8,11 +9,11 @@ services:
     ports:
       - 3306:3306
     networks:
-      - backend-network
+      - app-network
 
   java-backend:
     build:
-      context: .
+      context: ./AutocompleteBackend
       dockerfile: Dockerfile
     environment:
       DB_URL: jdbc:mysql://mysql:3306/autocomplete
@@ -23,9 +24,21 @@ services:
     ports:
       - 4567:4567
     networks:
-      - backend-network
+      - app-network
+
+  frontend:
+    build:
+      context: ./autocomplete-frontend
+      dockerfile: Dockerfile
+    environment:
+       NODE_ENV: production
+    ports:
+      - 3000:3000
+    networks:
+      - app-network
+
 networks:
-  backend-network:
+  app-network:
     driver: bridge
 volumes:
   db:
