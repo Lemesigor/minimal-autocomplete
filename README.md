@@ -4,8 +4,8 @@ This repository contains the source code for an autocomplete application, includ
 
 
 ## Tech Stack
-- **Frontend**: React with Vite, TypeScript, Emotion
-- **Backend**: Java 
+- **Frontend**: React with Vite, TypeScript, Emotion, Jest, React Testing Library.
+- **Backend**: Java, JUnit, Hamcrest
 - **Database**: MySql
 
 ## Prerequisites
