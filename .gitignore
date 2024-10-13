@@ -14,3 +14,16 @@ AutocompleteBackend/.idea/workspace.xml
 .DS_Store
 .idea/*
 *.iml
+
+autocomplete-frontend/node_modules
+autocomplete-frontend/node_modules/*
+autocomplete-frontend/node_modules/**/*
+autocomplete-frontend/.idea
+autocomplete-frontend/.idea/*
+autocomplete-frontend/.idea/**/*
+autocomplete-frontend/dist
+autocomplete-frontend/dist/*
+autocomplete-frontend/dist-ssr
+autocomplete-frontend/logs
+autocomplete-frontend/!log
+autocomplete-frontend/*.local
