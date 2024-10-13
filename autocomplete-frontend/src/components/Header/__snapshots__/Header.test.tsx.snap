@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render the header 1`] = `
+<div>
+  <header
+    class="css-1188xm2"
+  >
+    <h2
+      class="css-rnq8sf"
+    >
+      Autocomplete
+    </h2>
+  </header>
+</div>
+`;
