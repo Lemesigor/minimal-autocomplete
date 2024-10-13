@@ -3,7 +3,7 @@
 exports[`AutocompleteList should match the snapshot 1`] = `
 <div>
   <ul
-    class="css-11s0iie"
+    class="css-1is4opm"
     data-testid="results-list"
   >
     <li>

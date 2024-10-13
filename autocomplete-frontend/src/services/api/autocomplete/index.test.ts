@@ -16,8 +16,8 @@ describe('getAutocompleteData', () => {
 
     it('should fetch terms data successfully', async () => {
         const mockTerms: Term[] = [
-            { id: 1, term: 'apple' },
-            { id: 2, term: 'appleleple' },
+            { id: 1, value: 'apple' },
+            { id: 2, value: 'appleleple' },
         ];
 
         const mockResponse = {

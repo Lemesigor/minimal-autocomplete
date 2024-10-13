@@ -1,10 +1,10 @@
-const BASE_ENDPOINT = "https://localhost:4567/autocomplete?";
+const BASE_ENDPOINT = "http://localhost:4567/autocomplete?";
 
 const DEFAULT_LIMIT = 10;
 
 export type Term = {
     id: number;
-    term: string;
+    value: string;
 }
 
 export type TermResponse = {
@@ -15,6 +15,7 @@ export type TermResponse = {
 export const getAutocompleteData = async (query: string = "", signal: AbortSignal): Promise<Term[]> => {
     try {
         const autocompleteEndpoint = `${BASE_ENDPOINT}query=${encodeURIComponent(query)}&limit=${DEFAULT_LIMIT}`;
+        console.log("fetchint")
         const response = await fetch(autocompleteEndpoint, { signal });
         if (!response.ok) {
             console.error(`HTTP error! status: ${response.status}`);

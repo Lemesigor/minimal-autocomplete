@@ -1,11 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SuggestionItem should match the snapshot 1`] = `
+exports[`SuggestionItem should match the snapshot with search 1`] = `
 <div>
   <li
-    class="css-174lduu"
+    class="css-r1srfx"
     tabindex="-1"
   >
+    <img
+      alt="search"
+      class="css-k0ltuw"
+      src="recent_search.png"
+    />
+    <span
+      class="cursor-default"
+    >
+      test
+    </span>
+  </li>
+</div>
+`;
+
+exports[`SuggestionItem should match the snapshot without search 1`] = `
+<div>
+  <li
+    class="css-r1srfx"
+    tabindex="-1"
+  >
+    <img
+      alt="search"
+      class="css-k0ltuw"
+      src="search.png"
+    />
     <span
       class="cursor-default"
     >

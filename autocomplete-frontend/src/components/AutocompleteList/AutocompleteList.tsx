@@ -1,11 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 import {SuggestionItem} from '../SuggestionItem/SuggestionItem';
+import {Term} from "../../services/api/autocomplete";
 
-export type Term = {
-    id: string | number;
-    term: string;
-};
 
 type AutocompleteListProps = {
     items: Term[];
@@ -26,12 +23,14 @@ export const AutocompleteList = ({
         width: 24rem;
         font-size: 1.125rem;
         background-color: white;
+        list-style: none;
+        padding: 0;
 `;
 
     return (
         <ul data-testid={dataTestId} css={listStyle}>
             {items.map((item) => (
-                <SuggestionItem key={item.id} item={item} handleClick={handleClick}/>
+                <SuggestionItem key={item.id} item={item} handleClick={handleClick} isRecentSearch={isRecentSearchSuggestion}/>
             ))}
         </ul>
     );

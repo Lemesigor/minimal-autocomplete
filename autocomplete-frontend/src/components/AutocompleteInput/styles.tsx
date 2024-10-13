@@ -5,6 +5,7 @@ export const containerStyle = css`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  padding-top: 5rem;
   `;
 
 export const inputStyle = css`
@@ -20,7 +21,6 @@ export const inputStyle = css`
 
     &:focus,
     &:hover {
-        width: 24rem;
         outline: none;
     }
 `;

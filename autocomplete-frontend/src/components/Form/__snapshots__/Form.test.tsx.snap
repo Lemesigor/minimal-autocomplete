@@ -6,13 +6,14 @@ exports[`Form should render the form 1`] = `
     class="css-1ms9z5j"
   >
     <div
-      class="css-wmd499"
+      class="css-11aqn9s"
     >
       <input
-        class="css-y6v8d0"
+        class="css-6asy4p"
         data-testid="autocomplete-input"
         placeholder="Search an English Word"
         type="text"
+        value=""
       />
     </div>
   </section>

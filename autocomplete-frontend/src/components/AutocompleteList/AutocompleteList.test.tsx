@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { render } from "@testing-library/react";
-import { AutocompleteList, Term } from "./AutocompleteList";
+import { AutocompleteList } from "./AutocompleteList";
+import {Term} from "../../services/api/autocomplete";
 
 jest.mock("../SuggestionItem/SuggestionItem", () => ({
     SuggestionItem: jest.fn(() => <li>Mocked Suggestion Item</li>),
@@ -8,8 +9,8 @@ jest.mock("../SuggestionItem/SuggestionItem", () => ({
 
 describe("AutocompleteList", () => {
     const mockItems: Term[] = [
-        { id: 1, term: "apple" },
-        { id: 2, term: "banana" },
+        { id: 1, value: "apple" },
+        { id: 2, value: "banana" },
     ];
     const mockHandleClick = jest.fn();
 
