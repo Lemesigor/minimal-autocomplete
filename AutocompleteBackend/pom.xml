@@ -63,18 +63,18 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.13.0</version>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>3.5.0</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.4.1</version>
                 <configuration>
-                    <mainClass>com.org.autocomplete.Main</mainClass>
+                    <mainClass>org.autocomplete.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
