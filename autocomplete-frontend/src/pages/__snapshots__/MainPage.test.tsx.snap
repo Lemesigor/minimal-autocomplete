@@ -4,7 +4,7 @@ exports[`MainPage should render the main page 1`] = `
 <div>
   <main>
     <header
-      class="css-1188xm2"
+      class="css-ab6uec"
     >
       <h2
         class="css-rnq8sf"
@@ -13,12 +13,18 @@ exports[`MainPage should render the main page 1`] = `
       </h2>
     </header>
     <section
-      class="css-1a6pxyc"
+      class="css-1ms9z5j"
     >
-      <input
-        placeholder="Search"
-        type="text"
-      />
+      <div
+        class="css-wmd499"
+      >
+        <input
+          class="css-y6v8d0"
+          data-testid="autocomplete-input"
+          placeholder="Search an English Word"
+          type="text"
+        />
+      </div>
     </section>
   </main>
 </div>

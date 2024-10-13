@@ -9,7 +9,7 @@ describe("Form", () => {
     });
 
     it("should have input field", () => {
-        const {getByPlaceholderText} = render(<Form />);
-        expect(getByPlaceholderText("Search")).toBeInTheDocument();
+        const {getByTestId} = render(<Form />);
+        expect(getByTestId("autocomplete-input")).toBeInTheDocument();
     })
 });

@@ -3,12 +3,18 @@
 exports[`Form should render the form 1`] = `
 <div>
   <section
-    class="css-1a6pxyc"
+    class="css-1ms9z5j"
   >
-    <input
-      placeholder="Search"
-      type="text"
-    />
+    <div
+      class="css-wmd499"
+    >
+      <input
+        class="css-y6v8d0"
+        data-testid="autocomplete-input"
+        placeholder="Search an English Word"
+        type="text"
+      />
+    </div>
   </section>
 </div>
 `;

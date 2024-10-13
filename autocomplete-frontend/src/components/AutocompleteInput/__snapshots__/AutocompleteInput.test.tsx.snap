@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutocompleteInput should render the autocomplete input 1`] = `
+<div>
+  <div
+    class="css-wmd499"
+  >
+    <input
+      class="css-y6v8d0"
+      data-testid="autocomplete-input"
+      placeholder="Search an English Word"
+      type="text"
+    />
+  </div>
+</div>
+`;

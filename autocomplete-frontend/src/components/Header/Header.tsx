@@ -6,7 +6,6 @@ const headerStyle = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem; 
 `;
 
 const h2Style = css`
