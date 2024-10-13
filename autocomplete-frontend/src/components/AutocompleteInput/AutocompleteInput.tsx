@@ -6,6 +6,7 @@ import {containerStyle, inputStyle} from "./styles";
 export const AutocompleteInput = () => {
     const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
 
+    console.log(isInputFocused);
     return (
         <div css={containerStyle}>
             <input

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutocompleteList should match the snapshot 1`] = `
+<div>
+  <ul
+    class="css-11s0iie"
+    data-testid="results-list"
+  >
+    <li>
+      Mocked Suggestion Item
+    </li>
+    <li>
+      Mocked Suggestion Item
+    </li>
+  </ul>
+</div>
+`;
