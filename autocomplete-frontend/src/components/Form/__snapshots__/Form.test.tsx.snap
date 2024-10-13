@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should render the form 1`] = `
+<div>
+  <section
+    class="css-1a6pxyc"
+  >
+    <input
+      placeholder="Search"
+      type="text"
+    />
+  </section>
+</div>
+`;

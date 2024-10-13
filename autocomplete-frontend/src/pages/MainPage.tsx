@@ -1,9 +1,11 @@
-import {Header} from "../components/Header/Header.tsx";
+import {Header} from "../components/Header/Header";
+import {Form} from "../components/Form/Form";
 
 export const MainPage = () => {
     return (
-        <div>
-            <Header />
-        </div>
+        <main>
+            <Header/>
+            <Form/>
+        </main>
     )
 }

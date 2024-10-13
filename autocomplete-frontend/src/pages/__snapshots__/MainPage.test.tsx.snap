@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage should render the main page 1`] = `
+<div>
+  <main>
+    <header
+      class="css-1188xm2"
+    >
+      <h2
+        class="css-rnq8sf"
+      >
+        Autocomplete
+      </h2>
+    </header>
+    <section
+      class="css-1a6pxyc"
+    >
+      <input
+        placeholder="Search"
+        type="text"
+      />
+    </section>
+  </main>
+</div>
+`;
