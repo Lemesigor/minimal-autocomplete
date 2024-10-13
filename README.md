@@ -5,7 +5,7 @@ This repository contains the source code for an autocomplete application, includ
 
 ## Tech Stack
 - **Frontend**: React with Vite, TypeScript, Emotion
-- **Backend**: Java Vanilla
+- **Backend**: Java 
 - **Database**: MySql
 
 ## Prerequisites
@@ -34,7 +34,7 @@ docker-compose up --build
 ### Step 3: Run the Database Migrations
 **VERY IMPORTANT:** 
  After starting the backend containers, you need to run the migration.sh script to set up the database tables and seed the data. Without this step, the database will not have the necessary tables and data. *If it is not done, the application will not work as expected.*
-
+It will also populate the database with ~350K words from the `AutocompleteBackend/db/terms.csv` file.
  Navigate to the root directory of the repository and run the following command:
 
 ```sh
@@ -66,11 +66,11 @@ curl -X GET "http://localhost:4567/suggestions?query=java&limit=10" -H  "accept:
   "terms": [
     {
       "id": 1,
-      "value": "Java",
+      "value": "Java"
     },
     {
       "id": 2,
-      "value": "JavaScript",
+      "value": "JavaScript"
     }
   ]
 }
